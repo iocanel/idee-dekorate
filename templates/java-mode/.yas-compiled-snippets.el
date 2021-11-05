@@ -1,0 +1,9 @@
+;;; Compiled snippets and support files for `java-mode'
+;;; Snippet definitions:
+;;;
+(yas-define-snippets 'java-mode
+                     '(("dekorate-manifest-generator-factory" "`(idee-header)`\n`(idee-java-package-line)`\n\nimport io.dekorate.ManifestGeneratorFactory;\nimport io.dekorate.ConfigurationRegistry;\nimport io.dekorate.ResourceRegistry;\n\npublic class `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))` implements ManifestGeneratorFactory {\n\n  public `(replace-regexp-in-string \"factory$\" \"\" (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))` create(ResourceRegistry resourceRegistry, ConfigurationRegistry configurationRegistry) {\n    return new `(replace-regexp-in-string \"factory$\" \"\" (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`(resourceRegistry, configurationRegistry);\n  }\n}\n" "Dekorate Manifest Generator Factory" nil nil nil "/home/iocanel/workspace/src/github.com/dekorateio/dekorate/.idee/templates/java-mode/dekorate-manifest-generator-factory" nil nil)
+                       ("dekorate-configuration-generator-factory" "`(idee-header)`\npackage `(idee-java-package)`;\n\nimport io.dekorate.ConfigurationGeneratorFactory;\nimport io.dekorate.ConfigurationRegistry;\n\npublic class `(idee-java-class)` implements ConfigurationGeneratorFactory {\n\n  public `(replace-regexp-in-string \"factory$\" \"\" (idee-java-class))` create(ConfigurationRegistry configurationRegistry) {\n    return new `(replace-regexp-in-string \"factory$\" \"\" (idee-java-class))`(configurationRegistry);\n  }\n}\n" "Dekorate Configuration Generator Factory" nil nil nil "/home/iocanel/workspace/src/github.com/dekorateio/dekorate/.idee/templates/java-mode/dekorate-configuration-generator-factory" nil nil)))
+
+
+;;; Do not edit! File generated at Thu Nov  4 20:05:45 2021

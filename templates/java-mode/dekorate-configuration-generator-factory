@@ -1,0 +1,16 @@
+# contributor: Ioannis Canellos <iocanel@gmail.com>
+# name: Dekorate Configuration Generator Factory
+# key: dekorate-configuration-generator-factory
+# --
+`(idee/header)`
+package `(idee/java-package)`;
+
+import io.dekorate.ConfigurationGeneratorFactory;
+import io.dekorate.ConfigurationRegistry;
+
+public class `(idee/java-class)` implements ConfigurationGeneratorFactory {
+
+  public `(replace-Eegexp-in-string "factory$" "" (idee/java-class))` create(ConfigurationRegistry configurationRegistry) {
+    return new `(replace-regexp-in-string "factory$" "" (idee/java-class))`(configurationRegistry);
+  }
+}

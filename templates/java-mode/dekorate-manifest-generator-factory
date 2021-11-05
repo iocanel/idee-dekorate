@@ -1,0 +1,17 @@
+# contributor: Ioannis Canellos <iocanel@gmail.com>
+# name: Dekorate Manifest Generator Factory
+# key: dekorate-manifest-generator-factory
+# --
+`(idee/header)`
+`(idee/java-package-line)`
+
+import io.dekorate.ManifestGeneratorFactory;
+import io.dekorate.ConfigurationRegistry;
+import io.dekorate.ResourceRegistry;
+
+public class `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))` implements ManifestGeneratorFactory {
+
+  public `(replace-regexp-in-string "factory$" "" (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))` create(ResourceRegistry resourceRegistry, ConfigurationRegistry configurationRegistry) {
+    return new `(replace-regexp-in-string "factory$" "" (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`(resourceRegistry, configurationRegistry);
+  }
+}
