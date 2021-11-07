@@ -18,7 +18,7 @@
 ;;; Code:
 
 (require 'idee-arch)
-(require 'idee/java)
+(require 'idee-java)
 
 (defun dekorate-create-configuration-generator-factory ()
   "A simple java factory archetype."
@@ -31,8 +31,8 @@
     (idee/java-archetype-create-class fqcn "dekorate-configuration-generator-factory")
     (idee/java-register-spi "io.dekorate.ConfigurationGeneratorFactory" fqcn)))
 
-(idee-register-archetype
-  (make-idee-archetype
+(idee/archetype-register
+  (make-idee/archetype
    :name "Dekorate Configuration Generator Factory"
    :description "A factory for io.dekorate.ConfigurationGenerator"
    :func 'dekorate-create-configuration-generator-factory))
@@ -49,8 +49,8 @@
     (idee/java-archetype-create-class fqcn "dekorate-manifest-generator-factory")
     (idee/java-register-spi "io.dekorate.ManifestGeneratorFactory" fqcn)))
 
-(idee-register-archetype
-  (make-idee-archetype
+(idee/archetype-register
+  (make-idee/archetype
    :name "Dekorate Manifest Generator Factory"
    :description "A factory for io.dekorate.ManifestGenerator"
    :func 'dekorate-create-manifest-generator-factory))
